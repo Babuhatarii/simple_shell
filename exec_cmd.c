@@ -7,7 +7,7 @@
  */
 int execcmd(char *cmd, char **args)
 {
-	int sstatus;
+	int status;
 	pid_t pid;
 	int err_code = 0;
 

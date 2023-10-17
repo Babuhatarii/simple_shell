@@ -25,9 +25,8 @@ char *int_to_str(int num)
 	int digit = 0;
 	int i = 0;
 	char *str;
-	int divisor = 10000000000;
-
-	int_len = num_len(num);
+	int divisor = 1000000000;
+	int len = num_len(num);
 
 	str = malloc(len * sizeof(char) + 1);
 	if (!str)
@@ -35,7 +34,7 @@ char *int_to_str(int num)
 	if (num < 10)
 	{
 		str[i++] = num + '0';
-		str[i] = "\0";
+		str[i] = '\0';
 		return (str);
 	}
 	while (divisor)
